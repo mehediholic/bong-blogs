@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
     root: {
       minWidth: 275,
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
   });
 
 const Post = (props) => {
-    const {title, body} = props.post;
+    const {title, body, id} = props.post;
     const classes = useStyles();
     
     return (
@@ -30,8 +31,11 @@ const Post = (props) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
+          <Button variant="contained" color="secondary">Share</Button>
+          <Button variant="contained"><Link to={`/post/${id}`}>Read More</Link></Button>
+        </CardActions>
+            
+            
         </Card>
         </div>
     );

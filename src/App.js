@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import NoMatch from './components/NoMatch/NoMatch';
+import PostDetail from './components/PostDetail/PostDetail';
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
       <Switch>
         <Route path="/home">
           <Home></Home>
+        </Route>
+        <Route path="/post/:postId">
+          <PostDetail></PostDetail>
         </Route>
         <Route exact path="/">
           <Home></Home>
