@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 import Post from '../Post/Post';
 
 const Home = () => {
@@ -10,11 +13,17 @@ const Home = () => {
       .then(data => setPosts(data))
     }, [])
     return (
-        <div>
-             {
+
+        <React.Fragment>
+        <CssBaseline />
+        <Container fixed>
+            <Typography component="div" style={{height: '100vh' }}>
+            {
                 posts.map(post => <Post post={post}></Post>)
-            }
-        </div>
+             }
+            </Typography>
+        </Container>
+    </React.Fragment>
     );
 };
 

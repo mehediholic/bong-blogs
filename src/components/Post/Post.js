@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
     root: {
       minWidth: 275,
+      marginBottom: 20,
+      marginTop: 20,
     },
     title: {
       fontSize: 14,
@@ -26,16 +28,14 @@ const Post = (props) => {
                 <Typography variant="h5" component="h2">
                     {title}
                 </Typography>
-                <Typography variant="body2" component="p">
-                    {body}
+                    <Typography variant="body2" component="p">
+                        {body}
                 </Typography>
             </CardContent>
             <CardActions>
-          <Button variant="contained" color="secondary">Share</Button>
-          <Button variant="contained"><Link to={`/post/${id}`}>Read More</Link></Button>
-        </CardActions>
-            
-            
+                <Button variant="contained" color="secondary">Share</Button>
+                <Button variant="contained"><Link to={`/post/${id}`}>Read More</Link></Button>
+            </CardActions> 
         </Card>
         </div>
     );
