@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import ShowComment from '../ShowComment/ShowComment';
+import React from "react";
+import Avater from '../Avater/Avater';
 
-const Comment = () => {
 
-const {id} = useParams();
+const PostComments = (props) => {
+  const { name, email, body } = props.comment;
 
-const [comment ,setComment] =useState([])
-
-useEffect(()=> {
-fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
-.then(res => res.json())
-.then(data => setComment(data))
-
-})
-    return (
-        <div>
-           {
-                comment.map(comment => <ShowComment comment={comment}></ShowComment>)
-           }
-        </div>
-    );
+  return (
+      <div>
+          <Avater></Avater>
+        <h3 style={{ color: "green" }}>{name}</h3>
+        <p>
+          <strong style={{ color: "purple" }}>{email}</strong> - {body}
+        </p>
+      </div>
+  );
 };
 
-export default Comment;
+export default PostComments;

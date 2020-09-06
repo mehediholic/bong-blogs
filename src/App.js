@@ -12,6 +12,7 @@ import PostDetail from './components/PostDetail/PostDetail';
 import Header from './components/Header/Header';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+import Comment from './components/Comment/Comment';
 
 
 function App() {
