@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Comment from '../Comment/Comment';
 
+
+
 const PostDetail = () => {
     const {postId} = useParams();
     const [post, setPost] = useState({});
@@ -25,7 +27,7 @@ const PostDetail = () => {
             <h3>{post.title}</h3>
             <p>{post.body}</p>
             <hr/>
-            <div>
+        <div>
             <h3>Write Your Comment Below: </h3>
             <hr/>
             

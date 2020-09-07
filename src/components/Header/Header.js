@@ -1,12 +1,18 @@
 import React from 'react';
-import './Header.css';
-
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 
 const Header = () => {
+    
     return (
-        <div className="header">
-            <a href="#">Bong Blogs</a>
-        </div>
+        <div>
+        <AppBar position="static">
+            <Toolbar variant="dense">
+            <Typography variant="h3" color="inherit">Bong Blogs</Typography>
+            </Toolbar>
+        </AppBar>
+    </div>
     );
 };
 

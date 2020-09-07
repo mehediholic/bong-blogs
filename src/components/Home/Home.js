@@ -17,7 +17,7 @@ const Home = () => {
         <React.Fragment>
         <CssBaseline />
         <Container fixed>
-            <Typography component="div" style={{height: '100vh' }}>
+            <Typography component="div" style={{ backgroundColor: 'none', height: '100vh' }}>
             {
                 posts.map(post => <Post post={post}></Post>)
              }
