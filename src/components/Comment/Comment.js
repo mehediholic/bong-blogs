@@ -23,7 +23,7 @@ const PostComments = (props) => {
         </div>        
         <div style={commentBody}>
           <h3 style={{ color: "#1abc9c"}}>{name}</h3>
-          <p><small>Email: {email}</small></p>
+          <p style={{marginTop: "-20px"}}><small style={{color: "tomato"}}>Email: {email}</small></p>
           <p>{body}</p>
         </div>
       </div>

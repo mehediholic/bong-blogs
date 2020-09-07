@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Avater = () => {
+    
     const [avater , setAvater]= useState('');
     useEffect(() => {
    fetch('https://randomuser.me/api/')
@@ -9,7 +10,7 @@ const Avater = () => {
     },[])
     return (
         <div>
-            <img  src={avater} alt=""/>
+            <img style={{borderRadius: "100%"}} src={avater} alt=""/>
         </div>
     );
 };
